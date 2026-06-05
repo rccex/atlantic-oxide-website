@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlanticOxide Resources • Kritische Rohstoffe</title>
+  <meta name="description" content="AtlanticOxide Resources – Spezialist für Mining, Handel und Exploration kritischer Rohstoffe und Oxide. Professionell. Verantwortungsvoll. Zukunftssicher.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+    
+    :root {
+      --primary: #0A5C4A;
+    }
+    
+    .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    .nav-link {
+      transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-link:hover {
+      color: #0A5C4A;
+    }
+
+    .premium-card {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  border-color 0.2s ease;
+    }
+    
+    .premium-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+      border-color: #0A5C4A;
+    }
+
+    .stat-number {
+      font-feature-settings: "tnum";
+    }
+
+    .clean-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #E2E8F0, transparent);
+    }
+
+    .focus-ring {
+      transition: all 0.2s ease;
+    }
+    
+    .focus-ring:focus-visible {
+      outline: 2px solid #0A5C4A;
+      outline-offset: 2px;
+    }
+
+    .nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 0 #f1f5f9;
+    }
+
+    .hero-bg {
+      background: linear-gradient(145deg, #0A2F26 0%, #0F172A 100%);
+    }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+
+    .minimal-shadow {
+      box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.05), 0 4px 6px -4px rgb(15 23 42 / 0.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Navigation -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-slate-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-x-3 group">
+          <img src="assets/logo.png" alt="AtlanticOxide Resources" class="h-9 w-auto transition-transform group-hover:scale-[1.01]">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-[-0.1px]">
+          <a href="#was-wir-machen" class="nav-link text-slate-600 hover:text-slate-900">Was wir machen</a>
+          <a href="#schwerpunkte" class="nav-link text-slate-600 hover:text-slate-900">Schwerpunkte</a>
+          <a href="#warum" class="nav-link text-slate-600 hover:text-slate-900">Warum AtlanticOxide</a>
+          <a href="#kontakt" class="nav-link text-slate-600 hover:text-slate-900">Kontakt</a>
+        </div>
+
+        <!-- Desktop CTA -->
+        <div class="hidden md:block">
+          <a href="#kontakt" 
+             class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-[#0A5C4A] text-white rounded-full hover:bg-[#084A3B] active:bg-[#063D31] transition-colors focus-ring">
+            Kontakt aufnehmen
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn"
+                class="md:hidden inline-flex items-center justify-center w-10 h-10 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
+                aria-label="Menü öffnen">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6h12v12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+      <div class="px-6 py-8 flex flex-col gap-y-6 text-base font-medium">
+        <a href="#was-wir-machen" class="mobile-link text-slate-700">Was wir machen</a>
+        <a href="#schwerpunkte" class="mobile-link text-slate-700">Schwerpunkte</a>
+        <a href="#warum" class="mobile-link text-slate-700">Warum AtlanticOxide</a>
+        <a href="#kontakt" class="mobile-link text-slate-700">Kontakt</a>
+        <div class="pt-4 border-t border-slate-100">
+          <a href="#kontakt" 
+             class="mobile-link block w-full text-center px-6 py-3 bg-[#0A5C4A] text-white text-sm font-semibold rounded-full">
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero-bg min-h-[100dvh] flex items-center pt-20 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <!-- Dark Logo -->
+      <div class="mb-8 flex justify-center">
+        <img src="assets/logo-dark.jpg" alt="AtlanticOxide Resources" 
+             class="h-20 md:h-24 w-auto object-contain drop-shadow-2xl">
+      </div>
+
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl tracking-tighter text-white text-balance leading-[0.92] mb-6">
+        Rohstoffe,<br>die die Zukunft sichern.
+      </h1>
+      
+      <p class="max-w-[38ch] mx-auto text-xl md:text-2xl text-white/80 tracking-[-0.2px] mb-10">
+        Mining. Handel. Exploration.<br>
+        Kritische Rohstoffe und Oxide für anspruchsvolle Industrien.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#schwerpunkte" 
+           class="group inline-flex items-center justify-center gap-x-2.5 w-full sm:w-auto px-8 py-4 text-base font-semibold bg-white text-[#0A5C4A] rounded-full hover:bg-white/95 active:bg-white transition-all focus-ring shadow-xl shadow-black/10">
+          Unsere Schwerpunkte
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M14 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#kontakt" 
+           class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-base font-semibold border border-white/30 text-white rounded-full hover:bg-white/10 hover:border-white/40 active:bg-white/5 transition-all focus-ring">
+          Kontakt aufnehmen
+        </a>
+      </div>
+
+      <div class="mt-16 flex justify-center">
+        <div class="flex items-center gap-x-2 text-xs tracking-[2px] text-white/50 font-medium uppercase">
+          <div class="h-px w-8 bg-white/30"></div>
+          Deutschland • Global
+          <div class="h-px w-8 bg-white/30"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle bottom gradient -->
+    <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/40 to-transparent"></div>
+  </section>
+
+  <!-- Was wir machen -->
+  <section id="was-wir-machen" class="section-padding border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="flex flex-col items-center text-center">
+        <span class="inline-block text-xs font-semibold tracking-[2.5px] text-[#0A5C4A] uppercase mb-3">Unsere Expertise</span>
+        <h2 class="font-display text-4xl md:text-5xl tracking-tighter text-slate-900 mb-6 text-balance">Was wir machen</h2>
+        
+        <p class="max-w-2xl text-[17px] leading-relaxed text-slate-600">
+          AtlanticOxide Resources ist ein spezialisierter B2B-Partner für die Gewinnung, den Handel und die Exploration 
+          kritischer Rohstoffe und Oxide. Wir liefern präzise, verlässlich und mit höchsten Qualitätsansprüchen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unsere Schwerpunkte -->
+  <section id="schwerpunkte" class="section-padding bg-slate-50/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="inline-block text-xs font-semibold tracking-[2.5px] text-[#0A5C4A] uppercase mb-3">Kernkompetenzen</span>
+        <h2 class="font-display text-4xl md:text-5xl tracking-tighter text-slate-900">Unsere Schwerpunkte</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Card 1: Mining -->
+        <div class="premium-card group bg-white border border-slate-200 rounded-3xl p-8 lg:p-9 flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-[#0A5C4A]/10 flex items-center justify-center mb-7 group-hover:bg-[#0A5C4A]/15 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#0A5C4A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl tracking-tight font-semibold text-slate-900 mb-3">Mining</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">
+            Nachhaltige und effiziente Gewinnung hochwertiger kritischer Rohstoffe und Oxide mit modernster Technik und strengen Umweltstandards.
+          </p>
+          <div class="mt-auto pt-8 text-xs tracking-widest text-[#0A5C4A]/70 font-medium">FÖRDERUNG • VERARBEITUNG • QUALITÄT</div>
+        </div>
+
+        <!-- Card 2: Handel -->
+        <div class="premium-card group bg-white border border-slate-200 rounded-3xl p-8 lg:p-9 flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-[#0A5C4A]/10 flex items-center justify-center mb-7 group-hover:bg-[#0A5C4A]/15 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#0A5C4A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+          </div>
+          <h3 class="text-2xl tracking-tight font-semibold text-slate-900 mb-3">Handel</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">
+            Globaler, transparenter Handel mit verlässlichen Lieferketten. Direkte Verbindungen zu Produzenten und Abnehmern weltweit.
+          </p>
+          <div class="mt-auto pt-8 text-xs tracking-widest text-[#0A5C4A]/70 font-medium">SUPPLY CHAIN • LOGISTIK • VERTRIEB</div>
+        </div>
+
+        <!-- Card 3: Exploration -->
+        <div class="premium-card group bg-white border border-slate-200 rounded-3xl p-8 lg:p-9 flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-[#0A5C4A]/10 flex items-center justify-center mb-7 group-hover:bg-[#0A5C4A]/15 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#0A5C4A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+            </svg>
+          </div>
+          <h3 class="text-2xl tracking-tight font-semibold text-slate-900 mb-3">Exploration</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">
+            Systematische Identifikation, Bewertung und Entwicklung neuer Lagerstätten. Fundierte geologische Analysen und strategische Projektentwicklung.
+          </p>
+          <div class="mt-auto pt-8 text-xs tracking-widest text-[#0A5C4A]/70 font-medium">PROSPEKTION • ANALYSE • ENTWICKLUNG</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warum AtlanticOxide -->
+  <section id="warum" class="section-padding">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-x-12 gap-y-10 items-center">
+        <!-- Left: Heading -->
+        <div class="lg:col-span-5">
+          <span class="inline-block text-xs font-semibold tracking-[2.5px] text-[#0A5C4A] uppercase mb-3">Unser Versprechen</span>
+          <h2 class="font-display text-4xl md:text-[42px] tracking-tighter leading-[0.96] text-slate-900 mb-4">Warum AtlanticOxide</h2>
+          <p class="text-slate-600 text-[15.5px]">Kurz. Klar. Konsequent.</p>
+        </div>
+
+        <!-- Right: Points -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 rounded-full bg-[#0A5C4A] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg tracking-tight text-slate-900 mb-1.5">Höchste Qualitätsstandards</h4>
+              <p class="text-slate-600 text-[15px] leading-relaxed">Strenge Kontrollen und zertifizierte Prozesse sichern konsistente Premium-Qualität bei jedem Material.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 rounded-full bg-[#0A5C4A] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg tracking-tight text-slate-900 mb-1.5">Verantwortungsvolle Beschaffung</h4>
+              <p class="text-slate-600 text-[15px] leading-relaxed">Nachhaltige Praktiken, Umweltschutz und soziale Verantwortung entlang der gesamten Wertschöpfungskette.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 rounded-full bg-[#0A5C4A] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg tracking-tight text-slate-900 mb-1.5">Globale Reichweite, lokale Präzision</h4>
+              <p class="text-slate-600 text-[15px] leading-relaxed">Starkes internationales Netzwerk kombiniert mit deutscher Ingenieurskultur und exakter Ausführung.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 rounded-full bg-[#0A5C4A] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg tracking-tight text-slate-900 mb-1.5">Langfristige Partnerschaften</h4>
+              <p class="text-slate-600 text-[15px] leading-relaxed">Wir denken in Jahrzehnten – mit verlässlichen Verträgen, fairen Preisen und persönlichem Engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="section-padding bg-slate-900 text-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-x-16 gap-y-12">
+        <!-- Left: Info -->
+        <div>
+          <span class="inline-block text-xs font-semibold tracking-[2.5px] text-[#0A5C4A] uppercase mb-3">Nächster Schritt</span>
+          <h2 class="font-display text-4xl md:text-5xl tracking-tighter mb-6">Kontakt</h2>
+          
+          <p class="text-slate-400 text-[15.5px] max-w-md leading-relaxed mb-10">
+            Sprechen Sie mit uns über Ihre Anforderungen an kritische Rohstoffe. Wir antworten persönlich und zeitnah.
+          </p>
+
+          <div class="space-y-8 text-sm">
+            <div>
+              <div class="uppercase tracking-[1.5px] text-xs text-slate-500 mb-2">Adresse</div>
+              <div class="text-white text-[15px] leading-tight">
+                Musterstraße 42<br>
+                21266 Jesteburg<br>
+                Germany
+              </div>
+            </div>
+            
+            <div>
+              <div class="uppercase tracking-[1.5px] text-xs text-slate-500 mb-2">E-Mail</div>
+              <a href="mailto:info@atlanticoxide-resources.com" class="text-white hover:text-[#0A5C4A] transition-colors text-[15px]">info@atlanticoxide-resources.com</a>
+            </div>
+
+            <div>
+              <div class="uppercase tracking-[1.5px] text-xs text-slate-500 mb-2">Telefon</div>
+              <a href="tel:+494183987654" class="text-white hover:text-[#0A5C4A] transition-colors text-[15px]">+49 4183 987654</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 backdrop-blur">
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-xs tracking-widest uppercase text-slate-400 mb-1.5">Name</label>
+                <input type="text" id="name" name="name" required 
+                       class="w-full bg-white/5 border border-white/20 focus:border-[#0A5C4A] rounded-2xl px-5 py-3 text-white placeholder:text-slate-500 focus:outline-none text-sm focus-ring">
+              </div>
+              <div>
+                <label for="company" class="block text-xs tracking-widest uppercase text-slate-400 mb-1.5">Unternehmen</label>
+                <input type="text" id="company" name="company" 
+                       class="w-full bg-white/5 border border-white/20 focus:border-[#0A5C4A] rounded-2xl px-5 py-3 text-white placeholder:text-slate-500 focus:outline-none text-sm focus-ring">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs tracking-widest uppercase text-slate-400 mb-1.5">E-Mail-Adresse</label>
+              <input type="email" id="email" name="email" required 
+                     class="w-full bg-white/5 border border-white/20 focus:border-[#0A5C4A] rounded-2xl px-5 py-3 text-white placeholder:text-slate-500 focus:outline-none text-sm focus-ring">
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs tracking-widest uppercase text-slate-400 mb-1.5">Ihre Nachricht</label>
+              <textarea id="message" name="message" rows="5" required 
+                        class="w-full bg-white/5 border border-white/20 focus:border-[#0A5C4A] rounded-3xl px-5 py-4 text-white placeholder:text-slate-500 focus:outline-none resize-y min-h-[120px] text-sm focus-ring"
+                        placeholder="Beschreiben Sie kurz Ihr Anliegen..."></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full mt-2 flex items-center justify-center gap-x-2 bg-[#0A5C4A] hover:bg-[#084A3B] active:bg-[#063D31] transition-colors text-white font-semibold text-sm tracking-[-0.1px] py-4 rounded-full focus-ring">
+              Anfrage absenden
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M14 5l7 7-7 7m-4-7l7 7-7-7" />
+              </svg>
+            </button>
+
+            <p class="text-center text-[10px] text-slate-500 tracking-wide pt-1">Ihre Daten werden vertraulich behandelt.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-8 text-xs tracking-wider">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-3 text-center md:text-left">
+      <div>© <span id="year"></span> AtlanticOxide Resources. Alle Rechte vorbehalten.</div>
+      <div class="flex items-center gap-x-5">
+        <span class="hidden sm:inline">Musterstraße 42, 21266 Jesteburg, Germany</span>
+        <a href="#" class="hover:text-white transition-colors">Impressum</a>
+        <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast / Success Message -->
+  <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] bg-slate-900 text-white text-sm shadow-2xl rounded-2xl px-6 py-3.5 flex items-center gap-x-3 border border-white/10">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7" />
+    </svg>
+    <span>Vielen Dank. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</span>
+  </div>
+
+  <script>
+    // Tailwind config
+    function initTailwind() {
+      document.documentElement.style.setProperty('--accent', '#0A5C4A');
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Playfair Display', 'Georgia', 'serif']
+            }
+          }
+        }
+      };
+    }
+
+    // Navbar scroll effect
+    function initNavbar() {
+      const nav = document.getElementById('nav');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > 20) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+        
+        lastScroll = currentScroll;
+      }, { passive: true });
+    }
+
+    // Mobile menu
+    function initMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      btn.addEventListener('click', () => {
+        const isOpen = !menu.classList.contains('hidden');
+        
+        if (isOpen) {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-label', 'Menü öffnen');
+        } else {
+          menu.classList.remove('hidden');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          btn.setAttribute('aria-label', 'Menü schließen');
+        }
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    // Smooth scrolling for anchor links
+    function initSmoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            e.preventDefault();
+            
+            const navHeight = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - navHeight;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+    // Contact form handling (static)
+    function initContactForm() {
+      const form = document.getElementById('contact-form');
+      const toast = document.getElementById('toast');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Simple validation already handled by required attrs
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span class="flex items-center justify-center gap-x-2">
+            <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            Wird gesendet...
+          </span>
+        `;
+
+        // Simulate network request
+        setTimeout(() => {
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+
+          // Show toast
+          toast.classList.remove('hidden');
+          toast.classList.add('flex');
+
+          // Hide toast after 5s
+          setTimeout(() => {
+            toast.classList.remove('flex');
+            toast.classList.add('hidden');
+          }, 5200);
+        }, 1250);
+      });
+    }
+
+    // Set current year in footer
+    function initFooterYear() {
+      document.getElementById('year').textContent = new Date().getFullYear();
+    }
+
+    // Keyboard accessibility: close mobile menu on Escape
+    function initKeyboard() {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const menu = document.getElementById('mobile-menu');
+          const menuIcon = document.getElementById('menu-icon');
+          const closeIcon = document.getElementById('close-icon');
+          const btn = document.getElementById('mobile-menu-btn');
+
+          if (!menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            btn.setAttribute('aria-label', 'Menü öffnen');
+          }
+        }
+      });
+    }
+
+    // Subtle entrance animation for cards (optional premium touch)
+    function initCardAnimations() {
+      const cards = document.querySelectorAll('.premium-card');
+      
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+              }, index * 60);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        cards.forEach(card => {
+          card.style.opacity = '0.98';
+          card.style.transform = 'translateY(6px)';
+          card.style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+          observer.observe(card);
+        });
+      }
+    }
+
+    // Main init
+    function init() {
+      initTailwind();
+      initNavbar();
+      initMobileMenu();
+      initSmoothScroll();
+      initContactForm();
+      initFooterYear();
+      initKeyboard();
+      initCardAnimations();
+
+      // Mark year immediately
+      console.log('%c[AtlanticOxide] Modern single-page website initialized.', 'color:#64748b;font-size:9px');
+    }
+
+    // Boot
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
