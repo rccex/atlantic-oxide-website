@@ -6,7 +6,7 @@
   <title>AtlanticOxide Resources • Kritische Rohstoffe</title>
   <meta name="description" content="AtlanticOxide Resources – Spezialist für Mining, Handel und Exploration kritischer Rohstoffe und Oxide. Professionell. Verantwortungsvoll. Zukunftssicher.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="icon" type="image/png" href="assets/icon-optimized.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
     
@@ -93,8 +93,12 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-x-3 group">
-          <img src="assets/logo.png" alt="AtlanticOxide Resources" class="h-9 w-auto transition-transform group-hover:scale-[1.01]">
+        <a href="#hero" class="flex items-center gap-x-2.5 group" aria-label="AtlanticOxide Resources">
+          <img src="assets/icon-optimized.png" alt="" class="h-9 w-auto md:h-11 transition-transform group-hover:scale-[1.02] flex-shrink-0">
+          <div class="flex flex-col leading-none">
+            <span class="font-semibold text-[#0A5C4A] text-lg md:text-xl tracking-[-0.5px] group-hover:text-[#084A3B] transition-colors">AtlanticOxide</span>
+            <span class="text-[9px] md:text-[10px] text-slate-500 tracking-[2px] font-medium -mt-0.5">RESOURCES</span>
+          </div>
         </a>
 
         <!-- Desktop Navigation -->
@@ -130,6 +134,14 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
       <div class="px-6 py-8 flex flex-col gap-y-6 text-base font-medium">
+        <!-- Mobile Menu Logo / Branding -->
+        <div class="flex items-center gap-x-2 pb-4 border-b border-slate-100">
+          <img src="assets/icon-optimized.png" alt="" class="h-7 w-auto flex-shrink-0">
+          <div class="flex flex-col leading-none">
+            <span class="font-semibold text-[#0A5C4A] text-base tracking-[-0.3px]">AtlanticOxide</span>
+            <span class="text-[8px] text-slate-500 tracking-[1.5px] font-medium -mt-0.5">RESOURCES</span>
+          </div>
+        </div>
         <a href="#was-wir-machen" class="mobile-link text-slate-700">Was wir machen</a>
         <a href="#schwerpunkte" class="mobile-link text-slate-700">Schwerpunkte</a>
         <a href="#warum" class="mobile-link text-slate-700">Warum AtlanticOxide</a>
@@ -146,11 +158,22 @@
 
   <!-- Hero -->
   <section id="hero" class="hero-bg min-h-[100dvh] flex items-center pt-20 relative overflow-hidden">
+    <!-- Subtle elegant watermark (wasserzeichen-artig): low opacity, mix-blend, rotated for premium depth. Only decorative. -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-end justify-end pr-4 pb-8 md:pr-8 md:pb-12">
+      <img src="assets/logo-watermark.png" alt="" 
+           class="w-[260px] md:w-[340px] lg:w-[420px] h-auto opacity-[0.05] mix-blend-screen select-none"
+           style="transform: rotate(-15deg) scale(1.05);">
+    </div>
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-      <!-- Dark Logo -->
+      <!-- Hero Logo (icon + crisp text for visibility and elegance) -->
       <div class="mb-8 flex justify-center">
-        <img src="assets/logo-dark.jpg" alt="AtlanticOxide Resources" 
-             class="h-20 md:h-24 w-auto object-contain drop-shadow-2xl">
+        <div class="flex items-center gap-x-3">
+          <img src="assets/icon-optimized.png" alt="" class="h-16 md:h-20 w-auto drop-shadow-xl flex-shrink-0">
+          <div class="flex flex-col leading-none text-white">
+            <span class="font-display text-3xl md:text-4xl font-bold tracking-[-1px]">AtlanticOxide</span>
+            <span class="text-xs md:text-sm text-white/70 tracking-[3px] font-medium -mt-0.5">RESOURCES</span>
+          </div>
+        </div>
       </div>
 
       <h1 class="font-display text-5xl md:text-6xl lg:text-7xl tracking-tighter text-white text-balance leading-[0.92] mb-6">
@@ -259,8 +282,14 @@
   </section>
 
   <!-- Warum AtlanticOxide -->
-  <section id="warum" class="section-padding">
-    <div class="max-w-5xl mx-auto px-6">
+  <section id="warum" class="section-padding relative">
+    <!-- Very subtle watermark for elegant brand depth (only on large screens) -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden hidden xl:flex items-center justify-end pr-10">
+      <img src="assets/logo-watermark.png" alt="" 
+           class="w-[280px] h-auto opacity-[0.035] mix-blend-multiply select-none"
+           style="transform: rotate(12deg) translateY(-20%);">
+    </div>
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
       <div class="grid lg:grid-cols-12 gap-x-12 gap-y-10 items-center">
         <!-- Left: Heading -->
         <div class="lg:col-span-5">

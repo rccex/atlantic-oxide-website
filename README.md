@@ -34,9 +34,10 @@ Die Website wird automatisch über GitHub Actions bei jedem Push auf `main` auf 
 │   └── workflows/
 │       └── deploy.yml          # Automatisches Deployment auf Pages
 ├── assets/
-│   ├── icon.png                # Favicon / Icon
-│   ├── logo.png                # Logo (helle Variante)
-│   └── logo-dark.jpg           # Logo (dunkle Variante für Hero)
+│   ├── icon-optimized.png      # Clean transparent icon/mark (for nav, hero, favicon)
+│   ├── logo-watermark.png      # Subtle low-contrast version for elegant watermark effect
+│   ├── logo.png                # Original light full logo (kept for reference)
+│   └── logo-dark.jpg           # Original dark full logo (kept for reference)
 ├── index.html                  # Die komplette Website
 └── README.md
 ```
