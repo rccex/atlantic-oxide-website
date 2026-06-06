@@ -32,15 +32,29 @@ Die Website wird automatisch über GitHub Actions bei jedem Push auf `main` auf 
 .
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # Automatisches Deployment auf Pages
+│       └── deploy.yml          # Automatic deployment to Pages (includes /en/)
 ├── assets/
-│   ├── icon-optimized.png      # Clean transparent icon/mark (for nav, hero, favicon)
-│   ├── logo-watermark.png      # Subtle low-contrast version for elegant watermark effect
-│   ├── logo.png                # Original light full logo (kept for reference)
-│   └── logo-dark.jpg           # Original dark full logo (kept for reference)
-├── index.html                  # Die komplette Website
+│   ├── css/
+│   │   └── main.css            # Extracted custom styles (shared)
+│   ├── js/
+│   │   └── main.js             # Extracted JavaScript (shared)
+│   ├── icon-optimized.png      # Clean transparent icon/mark
+│   ├── icon-on-green.png       # Icon variant for green/dark backgrounds
+│   ├── logo-watermark.png      # Subtle low-contrast version for watermark effect
+│   └── ... (other logo references)
+├── en/
+│   └── index.html              # English version
+├── index.html                  # German version (root / default)
 └── README.md
 ```
+
+**Bilingual Support**
+- German: `/` (index.html)
+- English: `/en/` (en/index.html)
+- Language switcher (DE | EN) in navigation and mobile menu
+- Shared CSS/JS for maximum editability and identical design
+- Future languages easily addable following the same pattern
+- Impressum / Datenschutz currently as # links (separate pages planned for later)
 
 ## Nächste Schritte (optional)
 

@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          # Upload entire root (index.html + assets folder)
+          # Upload entire root (index.html + en/index.html + assets/css + assets/js + assets)
           path: "."
 
   deploy:
